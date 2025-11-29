@@ -1,4 +1,4 @@
-package com.semihsahinoglu.news_microservices_config;
+package com.semihsahinoglu.config_server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

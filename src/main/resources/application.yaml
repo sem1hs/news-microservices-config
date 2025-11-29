@@ -3,12 +3,12 @@ server:
 
 spring:
   application:
-    name: news-microservices-config
+    name: config-server
 
   cloud:
       config:
         server:
           git:
-            uri: https://github.com/sem1hs/news-microservices-config
+            uri: https://github.com/sem1hs/config-server
             default-label: main
             search-paths: src/main/resources
