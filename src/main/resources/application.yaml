@@ -5,6 +5,11 @@ spring:
   application:
     name: config-server
 
+  security:
+    user:
+      name: config
+      password: password123
+
   cloud:
       config:
         server:
