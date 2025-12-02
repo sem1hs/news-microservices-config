@@ -9,21 +9,15 @@ spring:
     gateway:
       server:
         webflux:
-          discovery:
-              locator:
-                enabled: true
-                lower-case-service-id: true
-
-      routes:
-        - id: news-service
-          uri: lb://news-service
-          predicates:
-            - Path=/api/v1/news/**
-
-        - id: auth-service
-          uri: lb://AUTH-SERVICE/
-          predicates:
-            - Path=/api/v1/auth/**
+          routes:
+            - id: auth-service
+              uri: lb://AUTH-SERVICE
+              predicates:
+                - Path=/api/v1/auth/**
+            - id: news-service
+              uri: lb://news-service
+              predicates:
+                - Path=/api/v1/news/**
 
 eureka:
   client:
