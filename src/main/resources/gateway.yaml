@@ -18,6 +18,10 @@ spring:
               uri: lb://news-service
               predicates:
                 - Path=/api/v1/news/**
+            - id: teams-service
+              uri: lb://teams-service
+              predicates:
+                - Path=/api/v1/teams/**
           discovery:
             locator:
               enabled: true
