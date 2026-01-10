@@ -26,6 +26,12 @@ spring:
               uri: lb://league-service
               predicates:
                 - Path=/api/v1/league/**
+            - id: league-internal
+              uri: lb://league-service
+              predicates:
+                - Path=/internal/league/**
+              filters:
+                - name: InternalOnly
           discovery:
             locator:
               enabled: true
