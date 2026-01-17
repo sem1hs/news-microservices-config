@@ -26,6 +26,10 @@ spring:
               uri: lb://league-service
               predicates:
                 - Path=/api/v1/league/**
+            - id: fixture-service
+              uri: lb://fixture-service
+              predicates:
+                - Path=/api/v1/fixture/**
           discovery:
             locator:
               enabled: true
