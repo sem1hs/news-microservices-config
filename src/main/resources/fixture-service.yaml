@@ -19,12 +19,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-logging:
-  level:
-    com:
-      semihsahinoglu:
-        fixture_service:
-          client: debug
 
 eureka:
   client:
