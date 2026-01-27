@@ -30,6 +30,10 @@ spring:
               uri: lb://fixture-service
               predicates:
                 - Path=/api/v1/fixture/**
+            - id: standing-service
+              uri: lb://standing-service
+              predicates:
+                - Path=/api/v1/standing/**
           discovery:
             locator:
               enabled: true
